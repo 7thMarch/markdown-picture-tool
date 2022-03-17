@@ -17,9 +17,10 @@ import java.util.regex.Pattern;
 
 
 public class Main {
-    private static int count;
+    //mdDirPath是你的md文件存放的文件夹，使用前请备份
     private static String mdDirPath = "/Users/aurora/Documents/笔记/study-note/docs";
     private static String regexPath;
+    //需要将md中图片的链接，替换成什么，比如你想将https://oss.cco.vin/blog/note 替换成https://picture.xcye.xyz
     private static String replacePath = "https://picture.xcye.xyz";
 
     public static void getParam() {
@@ -87,6 +88,7 @@ public class Main {
             content = content + line + "\n";
         }
 
+        //这里需要修改一下正则表达式匹配的md文件中的图片链接
         String regex = "!\\[[0-9a-zA-Z-~!@#$%^&*()._+]*]\\(((https|http)://ooszy\\.cco\\.vin/img/blog-note)";
         Pattern pattern = Pattern.compile(regex);
 
