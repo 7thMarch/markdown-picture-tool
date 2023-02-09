@@ -18,10 +18,10 @@ import java.util.regex.Pattern;
 
 public class Main {
     //mdDirPath是你的md文件存放的文件夹，使用前请备份
-    private static String mdDirPath = "/Users/aurora/Documents/笔记/study-note/docs";
+    private static String mdDirPath = "E:\\qsyyk\\Documents\\note-fuben";
     private static String regexPath;
     //需要将md中图片的链接，替换成什么，比如你想将https://oss.cco.vin/blog/note 替换成https://picture.xcye.xyz
-    private static String replacePath = "https://picture.xcye.xyz";
+    private static String replacePath = "https://cdn.xcye.xyz/note-picture";
 
     public static void getParam() {
         Scanner scanner = new Scanner(System.in);
@@ -74,7 +74,7 @@ public class Main {
     }
 
     public static void parseContent(String mdFilePath) throws Exception {
-        count++;
+        // count++;
 
         if (!mdFilePath.contains(".md")) {
             return;
